@@ -12,7 +12,7 @@ declare global {
   var _db: Db | undefined
 }
 
-export function useDb(): Db {
+export function getDb(): Db {
   if (global._db) return global._db
   const dbPath = resolve(process.cwd(), '.data/scenes.sqlite')
   mkdirSync(resolve(process.cwd(), '.data'), { recursive: true })

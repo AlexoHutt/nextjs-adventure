@@ -1,4 +1,4 @@
-import { useDb } from './index'
+import { getDb } from './index'
 import { scenes } from './schema'
 import type { Scene } from '@/stores/game'
 import rawScenes from '@/data/scenes.json'
@@ -7,7 +7,7 @@ let seeded = false
 
 export function seedIfEmpty() {
   if (seeded) return
-  const db = useDb()
+  const db = getDb()
   const existing = db.select().from(scenes).limit(1).all()
   if (existing.length > 0) { seeded = true; return }
 
