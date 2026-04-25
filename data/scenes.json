@@ -1,0 +1,129 @@
+{
+  "start": {
+    "id": "start",
+    "text": "You stand at a crossroads. The forest path winds to the north, and a cobblestone road leads east toward the distant city lights.",
+    "choices": [
+      {
+        "text": "Head into the forest",
+        "nextScene": "forest"
+      },
+      {
+        "text": "Follow the road to the city",
+        "nextScene": "city_gates"
+      },
+      {
+        "text": "go to test 1",
+        "nextScene": "test scene 1"
+      }
+    ]
+  },
+  "forest": {
+    "id": "forest",
+    "text": "The trees close in around you. It's quiet — too quiet. A rustle in the undergrowth catches your attention.",
+    "choices": [
+      {
+        "text": "Investigate the sound",
+        "nextScene": "forest_creature"
+      },
+      {
+        "text": "Ignore it and press on",
+        "nextScene": "forest_deep"
+      }
+    ]
+  },
+  "city_gates": {
+    "id": "city_gates",
+    "text": "The city gates loom ahead, torches flickering in the evening breeze. A guard eyes you suspiciously.",
+    "choices": [
+      {
+        "text": "State your business honestly",
+        "nextScene": "city_enter"
+      },
+      {
+        "text": "Try to slip past unnoticed",
+        "nextScene": "city_caught"
+      }
+    ]
+  },
+  "forest_creature": {
+    "id": "forest_creature",
+    "text": "A small fox peers at you from behind the bushes. It tilts its head, then trots away into the dark.",
+    "choices": [
+      {
+        "text": "Follow the fox",
+        "nextScene": "forest_deep"
+      },
+      {
+        "text": "Turn back to the crossroads",
+        "nextScene": "start"
+      }
+    ]
+  },
+  "forest_deep": {
+    "id": "forest_deep",
+    "text": "You venture deeper into the forest. The path ahead forks once more.",
+    "choices": [
+      {
+        "text": "Continue — to be continued...",
+        "nextScene": "start"
+      }
+    ]
+  },
+  "city_enter": {
+    "id": "city_enter",
+    "text": "The guard nods and waves you through. The city hums with life.",
+    "choices": [
+      {
+        "text": "Explore the market district",
+        "nextScene": "start"
+      },
+      {
+        "text": "Find an inn for the night",
+        "nextScene": "start"
+      }
+    ]
+  },
+  "city_caught": {
+    "id": "city_caught",
+    "text": "The guard grabs your arm. \"Not so fast.\" You'll have to talk your way out of this.",
+    "choices": [
+      {
+        "text": "Make up a convincing story",
+        "nextScene": "city_enter"
+      },
+      {
+        "text": "Run for it",
+        "nextScene": "start"
+      }
+    ]
+  },
+  "test scene 1": {
+    "id": "test scene 1",
+    "text": "descr 1",
+    "choices": [
+      {
+        "text": "go to test scene 2",
+        "nextScene": "test scene 2"
+      }
+    ]
+  },
+  "test scene 3": {
+    "id": "test scene 3",
+    "text": "New scene",
+    "choices": []
+  },
+  "test scene 2": {
+    "id": "test scene 2",
+    "text": "descr 2",
+    "choices": [
+      {
+        "text": "go to test scene 3",
+        "nextScene": "test scene 3"
+      },
+      {
+        "text": "return to test scene 1",
+        "nextScene": "test scene 1"
+      }
+    ]
+  }
+}
